@@ -1,0 +1,31 @@
+variable "instance_name" {
+  default = "k3s-lab"
+}
+
+variable "vm_count" {
+  default = 1
+}
+
+variable "target_node" {
+  default = "pve2"
+}
+
+variable "ipbase" {
+  default = "172.20.0."
+}
+
+variable "template_name" {
+  default = "ubuntu-template"
+}
+
+variable "vm_cores" {
+  default = 2
+}
+
+variable "vm_memory" {
+  default = 4096
+}
+
+variable "vm_disk_size" {
+  default = 50
+}
