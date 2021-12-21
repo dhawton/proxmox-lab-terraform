@@ -32,5 +32,5 @@ resource "proxmox_vm_qemu" "proxmox_vm" {
     ]
   }
 
-  ipconfig0 = "ip=${var.ipbase}${count.index + 1}/16,gw=172.16.0.1"
+  ipconfig0 = "ip=${var.ipbase}${count.index + 1}/12,gw=172.16.0.1"
 }
