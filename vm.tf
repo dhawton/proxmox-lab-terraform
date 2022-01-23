@@ -17,7 +17,7 @@ resource "proxmox_vm_qemu" "proxmox_vm" {
     slot     = 0
     size     = "${var.vm_disk_size}G"
     type     = "scsi"
-    storage  = "UnraidVMs"
+    storage  = "DS1"
     iothread = 1
   }
 
