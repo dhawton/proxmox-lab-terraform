@@ -1,6 +1,6 @@
 resource "proxmox_vm_qemu" "proxmox_vm" {
-  count       = var.vm_count
-  name        = "${var.instance_name}-${count.index + 1}"
+  count       = 1
+  name        = "${var.instance_name}"
   target_node = var.target_node
   clone       = var.template_name
 
@@ -32,5 +32,5 @@ resource "proxmox_vm_qemu" "proxmox_vm" {
     ]
   }
 
-  ipconfig0 = "ip=${var.ipbase}${count.index + 1}/12,gw=172.16.0.1"
+  ipconfig0 = "ip=${var.ipbase}/12,gw=172.16.0.1"
 }
